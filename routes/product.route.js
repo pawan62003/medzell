@@ -21,7 +21,7 @@ ProductRoute.get("/",async(req,res)=>{
     res.send(data)
    }else{
     const data = await ProductModel.find();
-    res.send(data).sort({ premium: 1, review: -1 })
+    res.send(data).sort({ premium: -1, review: -1 })
    }
 
     } catch (error) {
